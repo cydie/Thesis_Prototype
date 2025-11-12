@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cydri\\source\\repos\\Desktop_App\\Desktop_App\\Desktop_App.vbproj": {}
+    "C:\\Users\\cydri\\source\\repos\\Thesis_Prototype\\Desktop_App\\Desktop_App\\Desktop_App.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\cydri\\source\\repos\\Desktop_App\\Desktop_App\\Desktop_App.vbproj": {
+    "C:\\Users\\cydri\\source\\repos\\Thesis_Prototype\\Desktop_App\\Desktop_App\\Desktop_App.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cydri\\source\\repos\\Desktop_App\\Desktop_App\\Desktop_App.vbproj",
+        "projectUniqueName": "C:\\Users\\cydri\\source\\repos\\Thesis_Prototype\\Desktop_App\\Desktop_App\\Desktop_App.vbproj",
         "projectName": "Desktop_App",
-        "projectPath": "C:\\Users\\cydri\\source\\repos\\Desktop_App\\Desktop_App\\Desktop_App.vbproj",
+        "projectPath": "C:\\Users\\cydri\\source\\repos\\Thesis_Prototype\\Desktop_App\\Desktop_App\\Desktop_App.vbproj",
         "packagesPath": "C:\\Users\\cydri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cydri\\source\\repos\\Desktop_App\\Desktop_App\\obj\\",
+        "outputPath": "C:\\Users\\cydri\\source\\repos\\Thesis_Prototype\\Desktop_App\\Desktop_App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
