@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard-container">
+    <div class="sidebar">
+        <div class="logo-circle">
+            {% if logo_exists %}
+            <img src="{{ url_for('static', filename=logo_file) }}" alt="RePOS Logo" class="logo-image">
+            {% else %}
+            <div class="logo-text">RePOS</div>
+            <div class="logo-tagline">Predictive POS Maintenance</div>
+            {% endif %}
+        </div>
+        
+        <div class="pos-selection-section">
+            <h2 class="section-title">POS System type: Which POS System do you use?</h2>
+            
+            <div class="pos-grid">
+                <button class="pos-btn" onclick="selectPOS('LOYVERSE')">LOYVERSE</button>
+                <button class="pos-btn" onclick="selectPOS('SHOPIFY POS')">SHOPIFY POS</button>
+                <button class="pos-btn" onclick="selectPOS('MOSAIC POS')">MOSAIC POS</button>
+                <button class="pos-btn" onclick="selectPOS('iREAP POS')">iREAP POS</button>
+                <button class="pos-btn" onclick="selectPOS('QUICKBOOK POS')">QUICKBOOK POS</button>
+                <button class="pos-btn" onclick="selectPOS('VEND')">VEND</button>
+                <button class="pos-btn" onclick="selectPOS('SQUARE')">SQUARE</button>
+                <button class="pos-btn" onclick="selectPOS('QUICK POS')">QUICK POS</button>
+                <button class="pos-btn" onclick="selectPOS('NRS PHILLIPINES')">NRS PHILLIPINES</button>
+                <button class="pos-btn" onclick="selectPOS('UTAK POS')">UTAK POS</button>
+                <button class="pos-btn" onclick="selectPOS('POSIBLE.NET')">POSIBLE.NET</button>
+            </div>
+        </div>
+        
+        <button class="btn-back" onclick="window.location.href='{{ url_for('dashboard') }}'">BACK</button>
+    </div>
+    
+    <div class="main-content">
+        <div class="pos-display-panel">
+            <h2 class="section-title green">Selected POS System:</h2>
+            
+            <div class="selected-pos-display" id="selectedPOS">
+                {% if selected_pos %}
+                <button class="pos-selected-btn">{{ selected_pos }}</button>
+                {% else %}
+                <button class="pos-selected-btn" style="opacity: 0.5;">No POS Selected</button>
+                {% endif %}
+            </div>
+            
+            <p class="instruction-text">Press START to begin monitoring</p>
+            
+            <button class="btn-start-large" onclick="window.location.href='{{ url_for('dashboard') }}'">START</button>
+        </div>
+        
+        <div class="resource-gauges">
+            <div class="gauge">
+                <svg class="gauge-svg" viewBox="0 0 120 120">
+                    <circle class="gauge-background" cx="60" cy="60" r="50"></circle>
+                    <circle class="gauge-fill" cx="60" cy="60" r="50" style="stroke-dasharray: 62.8; stroke-dashoffset: 50.24;"></circle>
+                </svg>
+                <div class="gauge-text">20% CPU</div>
+            </div>
+            <div class="gauge">
+                <svg class="gauge-svg" viewBox="0 0 120 120">
+                    <circle class="gauge-background" cx="60" cy="60" r="50"></circle>
+                    <circle class="gauge-fill" cx="60" cy="60" r="50" style="stroke-dasharray: 62.8; stroke-dashoffset: 37.68;"></circle>
+                </svg>
+                <div class="gauge-text">40% RAM</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

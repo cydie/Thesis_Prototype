@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard-container">
+    <div class="sidebar">
+        <div class="logo-circle">
+            {% if logo_exists %}
+            <img src="{{ url_for('static', filename=logo_file) }}" alt="RePOS Logo" class="logo-image">
+            {% else %}
+            <div class="logo-text">RePOS</div>
+            <div class="logo-tagline">Predictive POS Maintenance</div>
+            {% endif %}
+        </div>
+        
+        <div class="control-buttons">
+            <button class="btn-control btn-start" onclick="startSystem()">START</button>
+            <button class="btn-control btn-pause" onclick="pauseSystem()">PAUSE</button>
+            <button class="btn-control btn-stop" onclick="stopSystem()">STOP</button>
+        </div>
+        
+        <div class="sidebar-bottom">
+            <button class="btn-sidebar" onclick="window.location.href='{{ url_for('history') }}'">HISTORY</button>
+            <button class="btn-sidebar" onclick="window.location.href='{{ url_for('pos_selection') }}'">TYPE OF POS</button>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="status-panel">
+            <div class="status-logs" id="statusLogs">
+                <div class="log-entry success">[OK] Filesystem check...</div>
+                <div class="log-entry success">[OK] Filesystem connection..</div>
+                <div class="log-entry success">[OK] Network connectivity..</div>
+                <div class="log-entry success">[OK] Databases (Scnnertility)</div>
+                <div class="log-entry success">[OK] Inventory sync agent, Printer, Card Reader)).</div>
+                <div class="log-entry running">[RUNNING]</div>
+                <div class="log-entry running">[RUNNING]</div>
+                <div class="log-entry success">[OK] Inventory sync agent (inv-service)</div>
+                <div class="log-entry success">[OK] (pay-gate servisrv</div>
+                <div class="log-entry success">[OK] Reporting service</div>
+                <div class="log-entry success">[SUCCESS] FULLY OPERATIONAL</div>
+            </div>
+            
+            <div class="system-status" id="systemStatus">
+                <div class="status-text">SYSTEM STATUS: <span id="statusValue">{{ system_status }}</span></div>
+                <div class="status-message">[SYSTEM STATUS] System is {{ system_status.lower() }}</div>
+            </div>
+        </div>
+        
+        <div class="resource-gauges">
+            <div class="gauge">
+                <svg class="gauge-svg" viewBox="0 0 120 120">
+                    <circle class="gauge-background" cx="60" cy="60" r="50"></circle>
+                    <circle class="gauge-fill" cx="60" cy="60" r="50" style="stroke-dasharray: 62.8; stroke-dashoffset: 50.24;"></circle>
+                </svg>
+                <div class="gauge-text">20% CPU</div>
+            </div>
+            <div class="gauge">
+                <svg class="gauge-svg" viewBox="0 0 120 120">
+                    <circle class="gauge-background" cx="60" cy="60" r="50"></circle>
+                    <circle class="gauge-fill" cx="60" cy="60" r="50" style="stroke-dasharray: 62.8; stroke-dashoffset: 37.68;"></circle>
+                </svg>
+                <div class="gauge-text">40% RAM</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
