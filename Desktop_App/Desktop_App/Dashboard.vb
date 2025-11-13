@@ -28,6 +28,25 @@ Public Class Dashboard
         progressTimer.Start()
     End Sub
 
+    ' Window control button handlers - same as Login_Register
+    Private Sub BtnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub BtnMaximize_Click(sender As Object, e As EventArgs) Handles btnMaximize.Click
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+            btnMaximize.Text = "□"
+        Else
+            Me.WindowState = FormWindowState.Maximized
+            btnMaximize.Text = "❐"
+        End If
+    End Sub
+
+    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
+    End Sub
+
     Private Sub PnlMain_Paint(sender As Object, e As PaintEventArgs)
         ' Draw grid pattern background - same as Login_Register
         Dim gridColor As Color = Color.FromArgb(30, 0, 200, 100) ' Subtle green
@@ -199,5 +218,25 @@ Public Class Dashboard
             progressTimer.Dispose()
         End If
         MyBase.OnFormClosing(e)
+    End Sub
+
+    Private Sub pnlProgressCPU_Paint_1(sender As Object, e As PaintEventArgs) Handles pnlProgressCPU.Paint
+
+    End Sub
+
+    Private Sub lblBrandTitle_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub lblPOSLabel_Click(sender As Object, e As EventArgs) Handles lblPOSLabel.Click
+
+    End Sub
+
+    Private Sub lblKPI_Click(sender As Object, e As EventArgs) Handles lblKPI.Click
+
+    End Sub
+
+    Private Sub lblCPUTitle_Click(sender As Object, e As EventArgs) Handles lblCPUTitle.Click
+
     End Sub
 End Class
