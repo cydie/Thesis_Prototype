@@ -239,4 +239,24 @@ Public Class Dashboard
     Private Sub lblCPUTitle_Click(sender As Object, e As EventArgs) Handles lblCPUTitle.Click
 
     End Sub
+
+    Private Sub pnlSystemStatus_Paint(sender As Object, e As PaintEventArgs) Handles pnlSystemStatus.Paint
+
+    End Sub
+
+    Private Sub pnlProgressPOS_Paint_1(sender As Object, e As PaintEventArgs) Handles pnlProgressPOS.Paint
+
+    End Sub
+
+    Private Sub picLogo_Click(sender As Object, e As EventArgs) Handles picLogo.Click
+
+    End Sub
+
+    Private Sub lblSystemLogTitle_Click(sender As Object, e As EventArgs) Handles lblSystemLogTitle.Click
+
+    End Sub
+
+    Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
+
+    End Sub
 End Class

@@ -22,16 +22,15 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
-        pnlSidebar = New Panel()
-        picLogo = New PictureBox()
-        btnHistory = New Button()
-        btnPOSType = New Button()
-        btnStop = New Button()
-        btnPause = New Button()
         pnlMain = New Panel()
+        btnHistory = New Button()
+        picLogo = New PictureBox()
+        btnPause = New Button()
+        btnPOSType = New Button()
         pnlAlerts = New Panel()
         lblAlertsContent = New Label()
         lblAlertsTitle = New Label()
+        btnStop = New Button()
         pnlSystemStatus = New Panel()
         lblStatusDetails = New Label()
         lblStatusValue = New Label()
@@ -54,9 +53,8 @@ Partial Class Dashboard
         btnMaximize = New Button()
         btnMinimize = New Button()
         lblFooter = New Label()
-        pnlSidebar.SuspendLayout()
-        CType(picLogo, ComponentModel.ISupportInitialize).BeginInit()
         pnlMain.SuspendLayout()
+        CType(picLogo, ComponentModel.ISupportInitialize).BeginInit()
         pnlAlerts.SuspendLayout()
         pnlSystemStatus.SuspendLayout()
         pnlProgressRAM.SuspendLayout()
@@ -64,99 +62,16 @@ Partial Class Dashboard
         pnlProgressPOS.SuspendLayout()
         SuspendLayout()
         ' 
-        ' pnlSidebar
-        ' 
-        pnlSidebar.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
-        pnlSidebar.BackColor = Color.FromArgb(CByte(10), CByte(10), CByte(12))
-        pnlSidebar.Controls.Add(picLogo)
-        pnlSidebar.Controls.Add(btnHistory)
-        pnlSidebar.Controls.Add(btnPOSType)
-        pnlSidebar.Controls.Add(btnStop)
-        pnlSidebar.Controls.Add(btnPause)
-        pnlSidebar.Location = New Point(14, 16)
-        pnlSidebar.Margin = New Padding(3, 4, 3, 4)
-        pnlSidebar.Name = "pnlSidebar"
-        pnlSidebar.Size = New Size(251, 848)
-        pnlSidebar.TabIndex = 0
-        ' 
-        ' picLogo
-        ' 
-        picLogo.BackColor = Color.Transparent
-        picLogo.BackgroundImageLayout = ImageLayout.Zoom
-        picLogo.Image = CType(resources.GetObject("picLogo.Image"), Image)
-        picLogo.Location = New Point(-31, 4)
-        picLogo.Margin = New Padding(3, 4, 3, 4)
-        picLogo.Name = "picLogo"
-        picLogo.Size = New Size(305, 232)
-        picLogo.SizeMode = PictureBoxSizeMode.Zoom
-        picLogo.TabIndex = 4
-        picLogo.TabStop = False
-        ' 
-        ' btnHistory
-        ' 
-        btnHistory.BackColor = Color.FromArgb(CByte(30), CByte(60), CByte(35))
-        btnHistory.FlatAppearance.BorderColor = Color.FromArgb(CByte(80), CByte(200), CByte(120))
-        btnHistory.FlatStyle = FlatStyle.Flat
-        btnHistory.Font = New Font("Consolas", 10.0F, FontStyle.Bold)
-        btnHistory.ForeColor = Color.White
-        btnHistory.Location = New Point(18, 523)
-        btnHistory.Margin = New Padding(3, 4, 3, 4)
-        btnHistory.Name = "btnHistory"
-        btnHistory.Size = New Size(215, 59)
-        btnHistory.TabIndex = 3
-        btnHistory.Text = "HISTORY"
-        btnHistory.UseVisualStyleBackColor = False
-        ' 
-        ' btnPOSType
-        ' 
-        btnPOSType.BackColor = Color.FromArgb(CByte(30), CByte(60), CByte(35))
-        btnPOSType.FlatAppearance.BorderColor = Color.FromArgb(CByte(80), CByte(200), CByte(120))
-        btnPOSType.FlatStyle = FlatStyle.Flat
-        btnPOSType.Font = New Font("Consolas", 10.0F, FontStyle.Bold)
-        btnPOSType.ForeColor = Color.White
-        btnPOSType.Location = New Point(18, 443)
-        btnPOSType.Margin = New Padding(3, 4, 3, 4)
-        btnPOSType.Name = "btnPOSType"
-        btnPOSType.Size = New Size(215, 59)
-        btnPOSType.TabIndex = 2
-        btnPOSType.Text = "POS TYPE"
-        btnPOSType.UseVisualStyleBackColor = False
-        ' 
-        ' btnStop
-        ' 
-        btnStop.BackColor = Color.FromArgb(CByte(30), CByte(60), CByte(35))
-        btnStop.FlatAppearance.BorderColor = Color.FromArgb(CByte(80), CByte(200), CByte(120))
-        btnStop.FlatStyle = FlatStyle.Flat
-        btnStop.Font = New Font("Consolas", 10.0F, FontStyle.Bold)
-        btnStop.ForeColor = Color.White
-        btnStop.Location = New Point(18, 363)
-        btnStop.Margin = New Padding(3, 4, 3, 4)
-        btnStop.Name = "btnStop"
-        btnStop.Size = New Size(215, 59)
-        btnStop.TabIndex = 1
-        btnStop.Text = "STOP"
-        btnStop.UseVisualStyleBackColor = False
-        ' 
-        ' btnPause
-        ' 
-        btnPause.BackColor = Color.FromArgb(CByte(30), CByte(60), CByte(35))
-        btnPause.FlatAppearance.BorderColor = Color.FromArgb(CByte(80), CByte(200), CByte(120))
-        btnPause.FlatStyle = FlatStyle.Flat
-        btnPause.Font = New Font("Consolas", 10.0F, FontStyle.Bold)
-        btnPause.ForeColor = Color.White
-        btnPause.Location = New Point(18, 283)
-        btnPause.Margin = New Padding(3, 4, 3, 4)
-        btnPause.Name = "btnPause"
-        btnPause.Size = New Size(215, 59)
-        btnPause.TabIndex = 0
-        btnPause.Text = "PAUSE"
-        btnPause.UseVisualStyleBackColor = False
-        ' 
         ' pnlMain
         ' 
         pnlMain.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         pnlMain.BackColor = Color.FromArgb(CByte(20), CByte(20), CByte(25))
+        pnlMain.Controls.Add(btnHistory)
+        pnlMain.Controls.Add(picLogo)
+        pnlMain.Controls.Add(btnPause)
+        pnlMain.Controls.Add(btnPOSType)
         pnlMain.Controls.Add(pnlAlerts)
+        pnlMain.Controls.Add(btnStop)
         pnlMain.Controls.Add(pnlSystemStatus)
         pnlMain.Controls.Add(lstSystemLog)
         pnlMain.Controls.Add(lblSystemLogTitle)
@@ -166,12 +81,70 @@ Partial Class Dashboard
         pnlMain.Controls.Add(lblKPI)
         pnlMain.Controls.Add(lblTitle)
         pnlMain.Controls.Add(btnEmergencyShutdown)
-        pnlMain.Location = New Point(283, 16)
+        pnlMain.Location = New Point(12, 16)
         pnlMain.Margin = New Padding(3, 4, 3, 4)
         pnlMain.Name = "pnlMain"
         pnlMain.Padding = New Padding(27, 32, 27, 32)
-        pnlMain.Size = New Size(1079, 848)
+        pnlMain.Size = New Size(1350, 848)
         pnlMain.TabIndex = 1
+        ' 
+        ' btnHistory
+        ' 
+        btnHistory.BackColor = Color.FromArgb(CByte(30), CByte(60), CByte(35))
+        btnHistory.FlatAppearance.BorderColor = Color.FromArgb(CByte(80), CByte(200), CByte(120))
+        btnHistory.FlatStyle = FlatStyle.Flat
+        btnHistory.Font = New Font("Consolas", 10.0F, FontStyle.Bold)
+        btnHistory.ForeColor = Color.White
+        btnHistory.Location = New Point(43, 451)
+        btnHistory.Margin = New Padding(3, 4, 3, 4)
+        btnHistory.Name = "btnHistory"
+        btnHistory.Size = New Size(215, 59)
+        btnHistory.TabIndex = 3
+        btnHistory.Text = "HISTORY"
+        btnHistory.UseVisualStyleBackColor = False
+        ' 
+        ' picLogo
+        ' 
+        picLogo.BackColor = Color.Transparent
+        picLogo.BackgroundImageLayout = ImageLayout.Zoom
+        picLogo.Image = CType(resources.GetObject("picLogo.Image"), Image)
+        picLogo.Location = New Point(10, 13)
+        picLogo.Margin = New Padding(3, 4, 3, 4)
+        picLogo.Name = "picLogo"
+        picLogo.Size = New Size(305, 232)
+        picLogo.SizeMode = PictureBoxSizeMode.Zoom
+        picLogo.TabIndex = 4
+        picLogo.TabStop = False
+        ' 
+        ' btnPause
+        ' 
+        btnPause.BackColor = Color.FromArgb(CByte(30), CByte(60), CByte(35))
+        btnPause.FlatAppearance.BorderColor = Color.FromArgb(CByte(80), CByte(200), CByte(120))
+        btnPause.FlatStyle = FlatStyle.Flat
+        btnPause.Font = New Font("Consolas", 10.0F, FontStyle.Bold)
+        btnPause.ForeColor = Color.White
+        btnPause.Location = New Point(55, 270)
+        btnPause.Margin = New Padding(3, 4, 3, 4)
+        btnPause.Name = "btnPause"
+        btnPause.Size = New Size(215, 59)
+        btnPause.TabIndex = 0
+        btnPause.Text = "PAUSE"
+        btnPause.UseVisualStyleBackColor = False
+        ' 
+        ' btnPOSType
+        ' 
+        btnPOSType.BackColor = Color.FromArgb(CByte(30), CByte(60), CByte(35))
+        btnPOSType.FlatAppearance.BorderColor = Color.FromArgb(CByte(80), CByte(200), CByte(120))
+        btnPOSType.FlatStyle = FlatStyle.Flat
+        btnPOSType.Font = New Font("Consolas", 10.0F, FontStyle.Bold)
+        btnPOSType.ForeColor = Color.White
+        btnPOSType.Location = New Point(55, 366)
+        btnPOSType.Margin = New Padding(3, 4, 3, 4)
+        btnPOSType.Name = "btnPOSType"
+        btnPOSType.Size = New Size(215, 59)
+        btnPOSType.TabIndex = 2
+        btnPOSType.Text = "POS TYPE"
+        btnPOSType.UseVisualStyleBackColor = False
         ' 
         ' pnlAlerts
         ' 
@@ -181,7 +154,7 @@ Partial Class Dashboard
         pnlAlerts.Controls.Add(lblAlertsContent)
         pnlAlerts.Controls.Add(lblAlertsTitle)
         pnlAlerts.ForeColor = Color.White
-        pnlAlerts.Location = New Point(710, 64)
+        pnlAlerts.Location = New Point(981, 64)
         pnlAlerts.Margin = New Padding(3, 4, 3, 4)
         pnlAlerts.Name = "pnlAlerts"
         pnlAlerts.Size = New Size(341, 357)
@@ -209,6 +182,21 @@ Partial Class Dashboard
         lblAlertsTitle.TabIndex = 0
         lblAlertsTitle.Text = "ACTIVE ALERTYS"
         ' 
+        ' btnStop
+        ' 
+        btnStop.BackColor = Color.FromArgb(CByte(30), CByte(60), CByte(35))
+        btnStop.FlatAppearance.BorderColor = Color.FromArgb(CByte(80), CByte(200), CByte(120))
+        btnStop.FlatStyle = FlatStyle.Flat
+        btnStop.Font = New Font("Consolas", 10.0F, FontStyle.Bold)
+        btnStop.ForeColor = Color.White
+        btnStop.Location = New Point(312, 451)
+        btnStop.Margin = New Padding(3, 4, 3, 4)
+        btnStop.Name = "btnStop"
+        btnStop.Size = New Size(215, 59)
+        btnStop.TabIndex = 1
+        btnStop.Text = "STOP"
+        btnStop.UseVisualStyleBackColor = False
+        ' 
         ' pnlSystemStatus
         ' 
         pnlSystemStatus.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
@@ -217,7 +205,7 @@ Partial Class Dashboard
         pnlSystemStatus.Controls.Add(lblStatusDetails)
         pnlSystemStatus.Controls.Add(lblStatusValue)
         pnlSystemStatus.Controls.Add(lblStatusTitle)
-        pnlSystemStatus.Location = New Point(731, 443)
+        pnlSystemStatus.Location = New Point(1002, 443)
         pnlSystemStatus.Margin = New Padding(3, 4, 3, 4)
         pnlSystemStatus.Name = "pnlSystemStatus"
         pnlSystemStatus.Size = New Size(320, 229)
@@ -264,10 +252,10 @@ Partial Class Dashboard
         lstSystemLog.Font = New Font("Consolas", 10.0F)
         lstSystemLog.ForeColor = Color.FromArgb(CByte(120), CByte(255), CByte(160))
         lstSystemLog.FormattingEnabled = True
-        lstSystemLog.Location = New Point(21, 503)
+        lstSystemLog.Location = New Point(10, 608)
         lstSystemLog.Margin = New Padding(3, 4, 3, 4)
         lstSystemLog.Name = "lstSystemLog"
-        lstSystemLog.Size = New Size(704, 300)
+        lstSystemLog.Size = New Size(975, 200)
         lstSystemLog.TabIndex = 7
         ' 
         ' lblSystemLogTitle
@@ -275,7 +263,7 @@ Partial Class Dashboard
         lblSystemLogTitle.AutoSize = True
         lblSystemLogTitle.Font = New Font("Consolas", 12.0F, FontStyle.Bold)
         lblSystemLogTitle.ForeColor = Color.White
-        lblSystemLogTitle.Location = New Point(69, 468)
+        lblSystemLogTitle.Location = New Point(30, 545)
         lblSystemLogTitle.Name = "lblSystemLogTitle"
         lblSystemLogTitle.Size = New Size(263, 23)
         lblSystemLogTitle.TabIndex = 6
@@ -286,7 +274,7 @@ Partial Class Dashboard
         pnlProgressRAM.BackColor = Color.Transparent
         pnlProgressRAM.Controls.Add(lblRAMValue)
         pnlProgressRAM.Controls.Add(lblRAMTitle)
-        pnlProgressRAM.Location = New Point(541, 209)
+        pnlProgressRAM.Location = New Point(814, 318)
         pnlProgressRAM.Margin = New Padding(3, 4, 3, 4)
         pnlProgressRAM.Name = "pnlProgressRAM"
         pnlProgressRAM.Size = New Size(142, 213)
@@ -320,7 +308,7 @@ Partial Class Dashboard
         pnlProgressCPU.BackColor = Color.Transparent
         pnlProgressCPU.Controls.Add(lblCPUValue)
         pnlProgressCPU.Controls.Add(lblCPUTitle)
-        pnlProgressCPU.Location = New Point(334, 204)
+        pnlProgressCPU.Location = New Point(621, 224)
         pnlProgressCPU.Margin = New Padding(3, 4, 3, 4)
         pnlProgressCPU.Name = "pnlProgressCPU"
         pnlProgressCPU.Size = New Size(163, 222)
@@ -354,7 +342,7 @@ Partial Class Dashboard
         pnlProgressPOS.BackColor = Color.Transparent
         pnlProgressPOS.Controls.Add(lblPOSValue)
         pnlProgressPOS.Controls.Add(lblPOSLabel)
-        pnlProgressPOS.Location = New Point(41, 128)
+        pnlProgressPOS.Location = New Point(335, 109)
         pnlProgressPOS.Margin = New Padding(3, 4, 3, 4)
         pnlProgressPOS.Name = "pnlProgressPOS"
         pnlProgressPOS.Size = New Size(251, 321)
@@ -386,9 +374,10 @@ Partial Class Dashboard
         ' lblKPI
         ' 
         lblKPI.AutoSize = True
+        lblKPI.BackColor = Color.Transparent
         lblKPI.Font = New Font("Consolas", 12.0F, FontStyle.Bold)
         lblKPI.ForeColor = Color.White
-        lblKPI.Location = New Point(69, 82)
+        lblKPI.Location = New Point(335, 64)
         lblKPI.Name = "lblKPI"
         lblKPI.Size = New Size(296, 23)
         lblKPI.TabIndex = 2
@@ -397,9 +386,10 @@ Partial Class Dashboard
         ' lblTitle
         ' 
         lblTitle.AutoSize = True
+        lblTitle.BackColor = Color.Transparent
         lblTitle.Font = New Font("Consolas", 18.0F, FontStyle.Bold)
         lblTitle.ForeColor = Color.White
-        lblTitle.Location = New Point(73, 32)
+        lblTitle.Location = New Point(335, 13)
         lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(383, 36)
         lblTitle.TabIndex = 1
@@ -411,9 +401,9 @@ Partial Class Dashboard
         btnEmergencyShutdown.BackColor = Color.FromArgb(CByte(40), CByte(120), CByte(60))
         btnEmergencyShutdown.FlatAppearance.BorderColor = Color.FromArgb(CByte(80), CByte(200), CByte(120))
         btnEmergencyShutdown.FlatStyle = FlatStyle.Flat
-        btnEmergencyShutdown.Font = New Font("Consolas", 10.0F, FontStyle.Bold)
+        btnEmergencyShutdown.Font = New Font("Consolas", 10F, FontStyle.Bold)
         btnEmergencyShutdown.ForeColor = Color.White
-        btnEmergencyShutdown.Location = New Point(818, 715)
+        btnEmergencyShutdown.Location = New Point(1089, 715)
         btnEmergencyShutdown.Margin = New Padding(3, 4, 3, 4)
         btnEmergencyShutdown.Name = "btnEmergencyShutdown"
         btnEmergencyShutdown.Size = New Size(192, 59)
@@ -428,7 +418,7 @@ Partial Class Dashboard
         btnClose.FlatAppearance.BorderSize = 0
         btnClose.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(40), CByte(45))
         btnClose.FlatStyle = FlatStyle.Flat
-        btnClose.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        btnClose.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         btnClose.ForeColor = Color.FromArgb(CByte(0), CByte(200), CByte(100))
         btnClose.Location = New Point(1320, 13)
         btnClose.Margin = New Padding(3, 4, 3, 4)
@@ -445,7 +435,7 @@ Partial Class Dashboard
         btnMaximize.FlatAppearance.BorderSize = 0
         btnMaximize.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(40), CByte(45))
         btnMaximize.FlatStyle = FlatStyle.Flat
-        btnMaximize.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        btnMaximize.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         btnMaximize.ForeColor = Color.FromArgb(CByte(0), CByte(200), CByte(100))
         btnMaximize.Location = New Point(1269, 13)
         btnMaximize.Margin = New Padding(3, 4, 3, 4)
@@ -462,7 +452,7 @@ Partial Class Dashboard
         btnMinimize.FlatAppearance.BorderSize = 0
         btnMinimize.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(40), CByte(40), CByte(45))
         btnMinimize.FlatStyle = FlatStyle.Flat
-        btnMinimize.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        btnMinimize.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         btnMinimize.ForeColor = Color.FromArgb(CByte(0), CByte(200), CByte(100))
         btnMinimize.Location = New Point(1217, 13)
         btnMinimize.Margin = New Padding(3, 4, 3, 4)
@@ -476,7 +466,7 @@ Partial Class Dashboard
         ' 
         lblFooter.Anchor = AnchorStyles.Bottom
         lblFooter.AutoSize = True
-        lblFooter.Font = New Font("Segoe UI", 10.0F)
+        lblFooter.Font = New Font("Segoe UI", 10F)
         lblFooter.ForeColor = Color.FromArgb(CByte(150), CByte(150), CByte(150))
         lblFooter.Location = New Point(528, 848)
         lblFooter.Name = "lblFooter"
@@ -486,7 +476,7 @@ Partial Class Dashboard
         ' 
         ' Dashboard
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(20), CByte(20), CByte(25))
         ClientSize = New Size(1376, 880)
@@ -495,17 +485,15 @@ Partial Class Dashboard
         Controls.Add(btnMaximize)
         Controls.Add(btnMinimize)
         Controls.Add(pnlMain)
-        Controls.Add(pnlSidebar)
         DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(3, 4, 3, 4)
         Name = "Dashboard"
         StartPosition = FormStartPosition.CenterScreen
         Text = "RePOS - System Monitor & Control"
-        pnlSidebar.ResumeLayout(False)
-        CType(picLogo, ComponentModel.ISupportInitialize).EndInit()
         pnlMain.ResumeLayout(False)
         pnlMain.PerformLayout()
+        CType(picLogo, ComponentModel.ISupportInitialize).EndInit()
         pnlAlerts.ResumeLayout(False)
         pnlAlerts.PerformLayout()
         pnlSystemStatus.ResumeLayout(False)
@@ -520,13 +508,7 @@ Partial Class Dashboard
         PerformLayout()
 
     End Sub
-
-    Friend WithEvents pnlSidebar As Panel
     Friend WithEvents pnlMain As Panel
-    Friend WithEvents btnPause As Button
-    Friend WithEvents btnStop As Button
-    Friend WithEvents btnPOSType As Button
-    Friend WithEvents btnHistory As Button
     Friend WithEvents btnEmergencyShutdown As Button
     Friend WithEvents lblTitle As Label
     Friend WithEvents lblKPI As Label
@@ -548,9 +530,13 @@ Partial Class Dashboard
     Friend WithEvents pnlAlerts As Panel
     Friend WithEvents lblAlertsContent As Label
     Friend WithEvents lblAlertsTitle As Label
-    Friend WithEvents picLogo As PictureBox
     Friend WithEvents btnClose As Button
     Friend WithEvents btnMaximize As Button
     Friend WithEvents btnMinimize As Button
     Friend WithEvents lblFooter As Label
+    Friend WithEvents btnPause As Button
+    Friend WithEvents btnStop As Button
+    Friend WithEvents btnPOSType As Button
+    Friend WithEvents btnHistory As Button
+    Friend WithEvents picLogo As PictureBox
 End Class
