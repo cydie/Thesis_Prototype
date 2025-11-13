@@ -195,7 +195,25 @@ Public Class Dashboard
     End Sub
 
     Private Sub BtnPOSType_Click(sender As Object, e As EventArgs) Handles btnPOSType.Click
-        MessageBox.Show("POS Type configuration will be implemented here.", "POS Type", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ' Navigate to Type of POS form
+        Dim typeOfPOSForm As Type_Of_POS = Nothing
+        
+        ' Try to find existing Type of POS form
+        For Each form As Form In Application.OpenForms
+            If TypeOf form Is Type_Of_POS Then
+                typeOfPOSForm = DirectCast(form, Type_Of_POS)
+                Exit For
+            End If
+        Next
+        
+        ' If Type of POS not found, create a new one
+        If typeOfPOSForm Is Nothing Then
+            typeOfPOSForm = New Type_Of_POS()
+        End If
+        
+        ' Show Type of POS and hide Dashboard
+        typeOfPOSForm.Show()
+        Me.Hide()
     End Sub
 
     Private Sub BtnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
