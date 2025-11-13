@@ -199,7 +199,8 @@ Public Class Dashboard
     End Sub
 
     Private Sub BtnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
-        MessageBox.Show("History view will be implemented here.", "History", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Dim historyForm As New History()
+        historyForm.Show()
     End Sub
 
     Private Sub BtnEmergencyShutdown_Click(sender As Object, e As EventArgs) Handles btnEmergencyShutdown.Click

@@ -17,3 +17,5 @@ C:\Users\cydri\source\repos\Thesis_Prototype\Desktop_App\Desktop_App\obj\Debug\n
 C:\Users\cydri\source\repos\Thesis_Prototype\Desktop_App\Desktop_App\obj\Debug\net9.0-windows\Desktop_App.vbproj.GenerateResource.cache
 C:\Users\cydri\source\repos\Thesis_Prototype\Desktop_App\Desktop_App\obj\Debug\net9.0-windows\Desktop_App.Resources.resources
 C:\Users\cydri\source\repos\Thesis_Prototype\Desktop_App\Desktop_App\obj\Debug\net9.0-windows\Desktop_App.Dashboard.resources
+C:\Users\cydri\source\repos\Thesis_Prototype\Desktop_App\Desktop_App\obj\Debug\net9.0-windows\Desktop_App.History.resources
+C:\Users\cydri\source\repos\Thesis_Prototype\Desktop_App\Desktop_App\obj\Debug\net9.0-windows\Desktop_App.Analysis_Report.resources

@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Analysis_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="History.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login_Register.vb">

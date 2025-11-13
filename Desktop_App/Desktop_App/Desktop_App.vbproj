@@ -8,6 +8,10 @@
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="taskkill /F /IM Desktop_App.exe 2>nul || exit 0" IgnoreExitCode="true" />
+  </Target>
+
   <ItemGroup>
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
